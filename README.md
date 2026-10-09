@@ -1,12 +1,13 @@
-# Homebrew Casks
+# Missing Casks
 
 Custom Homebrew tap for casks that are no longer available from upstream Homebrew.
 
 ## Usage
 
-After publishing this repository as `sashkab/homebrew-casks`:
+Because this repository is named `missing-casks` rather than
+`homebrew-missing-casks`, tap it using its full GitHub URL:
 
 ```sh
-brew tap sashkab/casks
-brew install --cask sashkab/casks/rar
+brew tap sashkab/missing-casks https://github.com/sashkab/missing-casks.git
+brew install --cask sashkab/missing-casks/rar
 ```

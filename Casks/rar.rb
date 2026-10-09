@@ -22,5 +22,10 @@ cask "rar" do
   artifact "rar/default.sfx", target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
   artifact "rar/rarfiles.lst", target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
 
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "#{staged_path}/rar/rar"]
+    system_command "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "#{staged_path}/rar/unrar"]
+  end
+
   # No zap stanza required
 end
